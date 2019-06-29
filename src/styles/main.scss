@@ -1,9 +1,17 @@
 @import 'reset';
+
+@mixin center(){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 $font-stack: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
 $main-color: #256EFF;
 $light-color: #c1c1c1;
 $warning-red: #d3212d;
 $accept-green: #00cc00;
+
 body{font-family: $font-stack}
 #global-grid{
     display: grid;
@@ -91,9 +99,7 @@ body{font-family: $font-stack}
 .task_container-3{
     grid-area: delete;
     height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include center();
 }
 .task_delete-button{
     margin: auto;
@@ -111,9 +117,7 @@ body{font-family: $font-stack}
 }
 .task_container-1{
     grid-area: checkbox;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include center();
 }
 .task_checkbox{
     width: 2em;
@@ -121,9 +125,7 @@ body{font-family: $font-stack}
 }
 .task_container-2{
     grid-area: edit;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include center();
 }
 .task_edit-button{
     width: 4em;
@@ -164,9 +166,7 @@ button:focus, input:focus{
 }
 .task_container-order{
     grid-area: order;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include center();
 }
 .order_button{
     width:2em;
